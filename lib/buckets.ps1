@@ -89,7 +89,7 @@ function add_bucket($name, $repo) {
     }
 
     if (!(Test-CommandAvailable git)) {
-        abort "Git is required for buckets. Run 'scoop install git' and try again."
+        warn "Git is required for buckets. Running 'scoop install git'..."
     }
 
     $dir = Find-BucketDirectory $name -Root
